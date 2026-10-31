@@ -1,0 +1,17 @@
+{
+  "name": "is-fashion-server",
+  "version": "2.0.0",
+  "description": "IS Fashion — পুশ নোটিফিকেশন + Forgot Password OTP সার্ভার (এক সার্ভারে দুই কাজ)",
+  "main": "src/index.js",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/push.js && node --check src/otp.js && node --check src/gmail.js && node --check src/firebase.js && node --check src/security.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.7.0"
+  }
+}

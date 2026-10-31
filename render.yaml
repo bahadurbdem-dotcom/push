@@ -1,0 +1,24 @@
+# Render "Blueprint" — ঐচ্ছিক। চাইলে Render এ New → Blueprint দিয়েও ডিপ্লয় করা যায়।
+services:
+  - type: web
+    name: is-fashion-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_KEY
+        sync: false
+      - key: GMAIL_USER
+        sync: false
+      - key: GMAIL_CLIENT_ID
+        sync: false
+      - key: GMAIL_CLIENT_SECRET
+        sync: false
+      - key: GMAIL_REFRESH_TOKEN
+        sync: false
+      - key: STORE_NAME
+        value: IS Fashion
